@@ -1,6 +1,6 @@
 ## Table of contents :
+
 - [About the project](#about-the-project)
-<img align= right src=https://user-images.githubusercontent.com/52712038/91175054-79dfe300-e6e0-11ea-98a7-9cae7162c29f.png> 
 	- [Who is it for ?](#who-is-it-for)
 	- [What is it for ?](#what-is-it-for)
 - [Getting started !](#getting-started)
