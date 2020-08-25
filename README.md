@@ -1,5 +1,7 @@
 ## Table of contents :
 
+<img align="right" src=https://user-images.githubusercontent.com/52712038/91175054-79dfe300-e6e0-11ea-98a7-9cae7162c29f.png> 
+
 - [About the project](#about-the-project)
 	- [Who is it for ?](#who-is-it-for)
 	- [What is it for ?](#what-is-it-for)
@@ -72,8 +74,8 @@ If you want to run the source code than :
 ### setting up the application
 
 Here you can see the "Command" part of the GUI wich is divided in frames
+<img align="right" src=https://user-images.githubusercontent.com/52712038/91230716-4cb92200-e72c-11ea-8862-33c57b3ada5d.png> 
 - **Demods**
-<img align =right src=https://user-images.githubusercontent.com/52712038/91230716-4cb92200-e72c-11ea-8862-33c57b3ada5d.png> 
 In which you can select the demod you want and the data you want to plot from it
 - **Settings** *(line by line)*
 	- Tell the software in which direction the microscope is scanning by clicking on **"Up-Down"** which changes to **"Down-up"** and vice versa so that the application starts plotting in the right dirrection. If you make a mistake you can just click on **"Flip"** to Flip the image.
