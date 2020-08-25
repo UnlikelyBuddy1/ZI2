@@ -1,32 +1,25 @@
-
-# ASG : Zi²
-![image](https://user-images.githubusercontent.com/52712038/91175054-79dfe300-e6e0-11ea-98a7-9cae7162c29f.png)
 ## Table of contents :
-- About the project
-	- Description
-	- Who is it for ?
-- Getting started
-	- Prerequisites
-	- Installation
-- Usage
-	- Setting up Zi²
-	- Making an image
-	- Saving an image
-	- Getting further
-- License
-- Contact
-- Getting help
-	- Manual
-	- Report bugs
+- [About the project](#about-the-project)
+<img align= right src=https://user-images.githubusercontent.com/52712038/91175054-79dfe300-e6e0-11ea-98a7-9cae7162c29f.png> 
+	- [Who is it for ?](#who-is-it-for)
+	- [What is it for ?](#what-is-it-for)
+- [Getting started !](#getting-started)
+	- [Prerequisites](#prerequisites)
+	- [Installation](#installation)
+- [How to use](#how-to-use)
+	- [setting up the application](#setting-up-the-application)
+- [License](#license)
+- [Contact](#contact-not-for-bug-reports)
+- [Help](#help)
 
 ## About the project
-### Who is it for ?
+### Who is it for
 **Zi²** is an application for people who are working with **AFM** *(Atomic Force Microscopes)* and **PFM** *(Piezo Force Microscope)* on the **Nanoscope V** with a **Zurich Instruments HF2LI** lock-in amplifier.
 
-### What is it for ?
+### What is it for
 The goal of this application is to fulfill a need from the scientists working with the previously described instruments. They needed to be able *(in my case)* to **plot more than the 3 images they where limited to in the Nanoscope V's software**. Given that all the signals that we want can be sourced to the Zurich Instruments **HF2LI**, we thus can **communicate with it's API using Python** to obtain all the demodulators data streams *(R, Theta, X, Y, Frequency)* we need and plot as many graphs as we want.
 
-## Getting started !
+## Getting started
 ### Prerequisites
 There are two ways of running this application, either using an simple ***EXE*** for **Windows** that has to be launched within its folder (because they contain all the python modules, appliccation data etc...) and that requieres no installer. 
 
@@ -77,10 +70,10 @@ If you want to run the source code than :
 
 ## How to use 
 ### setting up the application
-<img src=https://user-images.githubusercontent.com/52712038/91180565-28d3ed00-e6e8-11ea-8797-4e238122b366.png> 
 
 Here you can see the "Command" part of the GUI wich is divided in frames
 - **Demods**
+<img align =right src=https://user-images.githubusercontent.com/52712038/91230716-4cb92200-e72c-11ea-8862-33c57b3ada5d.png> 
 In which you can select the demod you want and the data you want to plot from it
 - **Settings** *(line by line)*
 	- Tell the software in which direction the microscope is scanning by clicking on **"Up-Down"** which changes to **"Down-up"** and vice versa so that the application starts plotting in the right dirrection. If you make a mistake you can just click on **"Flip"** to Flip the image.
@@ -114,14 +107,21 @@ The application is protected by the CeCILL-C FREE SOFTWARE LICENSE AGREEMENT
 
 You can read the full LICENSE at : https://cecill.info/licences/Licence_CeCILL-C_V1-en.txt
 
-## Contact (Not for bug reports)
+## Contact, *Not for bug reports*
 You can contact me at adrianos.sidiras@gmail.com, however I no longer work on this project since it was for an internship
 ## Help 
 Please consider reading the manual to see commun errors if something goes wrong, and if the problem can't be solved i encourage you to modify the source code so as to solve the problem
 
+
+
 	
 
 
+
+
+
+
+ 
 
 
 
