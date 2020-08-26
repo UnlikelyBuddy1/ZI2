@@ -112,7 +112,11 @@ You can read the full LICENSE at : https://cecill.info/licences/Licence_CeCILL-C
 ## Contact, *Not for bug reports*
 You can contact me at adrianos.sidiras@gmail.com, however I no longer work on this project since it was for an internship
 ## Help 
-Please consider reading the manual to see commun errors if something goes wrong, and if the problem can't be solved i encourage you to modify the source code so as to solve the problem
+Please consider reading the manual to see commun errors if something goes wrong, and if the problem can't be solved i recommand you read Zurich instrument's manual 
+- **HF2LI Manual** : https://www.zhinst.com/sites/default/files/documents/2020-03/ziHF2_UserManual_LabOne_20.01.0.pdf
+- **LabOne Programming Manual** : https://www.zhinst.com/sites/default/files/documents/2020-03/LabOneProgrammingManual_20.01.0.pdf
+
+if you have the necessary knowledge i also encourage you to modify the source code so as to solve the problem and share your results with the community.
 
 
 
