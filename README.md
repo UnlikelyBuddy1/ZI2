@@ -89,7 +89,7 @@ In which you can select the demod you want and the data you want to plot from it
 - **Connexion & more** (appears if you check advanced settings)
 	- **Connect at launch**, simply does the same thing as if you where to click the connect button but it does it automaticaly when you launch the application
 	- **Hostame and port**, let those at default value if you connect to the HF2LI via USB
-	- **Manual sampling rate**, allows you to overwrite the sampling rates set by the application in order to acquire the trigger signals correctly, read the [manual](manual) for more information on that.
+	- **Manual sampling rate**, allows you to overwrite the sampling rates set by the application in order to acquire the trigger signals correctly, read the [**manual**](manual) for more information on that.
 	- **Save to gwy and save to csv** allows you to chose in which format you want to save your data, you can select both.
 - **Controls**
 	- **Reset** , resets all the images and waits for a Vertical Trigger from the Nanoscope V to plot
@@ -107,12 +107,12 @@ The application is protected by the CeCILL-C FREE SOFTWARE LICENSE AGREEMENT
 
 *"The purpose of this Free Software license agreement is to grant users the right to modify and re-use the software governed by this license. The exercising of this right is conditional upon the obligation to make available to the community the modifications made to the source code of the software so as to contribute to its evolution."*
 
-You can also read the full [LICENSE](https://cecill.info/licences/Licence_CeCILL-C_V1-en.txt)
+You can also read the full [**LICENSE**](https://cecill.info/licences/Licence_CeCILL-C_V1-en.txt)
 
 ## Contact, *Not for bug reports*
 You can contact me at adrianos.sidiras@gmail.com, however I no longer work on this project since it was for a 2 months internship
 ## Special thanks
-I'd like to thank the [INL](https://inl.cnrs.fr/) and both of my internship tutors, Nicolas BABOUX and [David ALBERTINI](david.albertini[@]insa-lyon.fr) for the guidance they provided in this project, as well as Mehdi ALEM from the Zurich instruments support team which did an amazing job of explaining how to get advantage of the HF2LI programming features.
+I'd like to thank the [**INL**](https://inl.cnrs.fr/) and both of my internship tutors, Nicolas BABOUX and [David ALBERTINI](david.albertini[@]insa-lyon.fr) for the guidance they provided in this project, as well as Mehdi ALEM from the Zurich instruments support team which did an amazing job of explaining how to get advantage of the HF2LI programming features.
 
 ## Help 
 Please consider reading the manual to see commun errors if something goes wrong, and if the problem can't be solved i recommand you read Zurich instrument's manual 
