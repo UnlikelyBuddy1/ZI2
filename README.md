@@ -3,7 +3,6 @@
 <img align="right" src=https://user-images.githubusercontent.com/52712038/91175054-79dfe300-e6e0-11ea-98a7-9cae7162c29f.png> 
 
 - [About the project](#about-the-project)
-	- [Who is it for ?](#who-is-it-for)
 	- [What is it for ?](#what-is-it-for)
 - [Getting started !](#getting-started)
 	- [Prerequisites](#prerequisites)
@@ -12,27 +11,25 @@
 	- [setting up the application](#setting-up-the-application)
 - [License](#license)
 - [Contact](#contact-not-for-bug-reports)
+- [Special thanks](#special-thanks)
 - [Help](#help)
 
 ## About the project
-### Who is it for
-**Zi²** is an application for people who are working with **AFM** *(Atomic Force Microscopes)* and **PFM** *(Piezo Force Microscope)* on the **Nanoscope V** with a **Zurich Instruments HF2LI** lock-in amplifier.
-
 ### What is it for
-The goal of this application is to fulfill a need from the scientists working with the previously described instruments. They needed to be able *(in my case)* to **plot more than the 3 images they where limited to in the Nanoscope V's software**. Given that all the signals that we want can be sourced to the Zurich Instruments **HF2LI**, we thus can **communicate with it's API using Python** to obtain all the demodulators data streams *(R, Theta, X, Y, Frequency)* we need and plot as many graphs as we want.
+The goal of this application is to be able to be able to bypass the limitation of using the 4 auxiliary signals of the HF2LI by taking the signals data dirrectly from the HF2LI through the USB port instead of coaxial cables. The application will **communicate with the HF2LI API using Python** to obtain all the demodulators data streams *(R, Theta, X, Y, Frequency)* we need and plot as many graphs as we want.
 
 ## Getting started
 ### Prerequisites
 There are two ways of running this application, either using an simple ***EXE*** for **Windows** that has to be launched within its folder (because they contain all the python modules, appliccation data etc...) and that requieres no installer. 
 
 **Or** by **running the source code** of the application with Python and all the modules. In wich case you'll need :
-- [**Python version 3.7.7**](https://www.python.org/downloads/)
+- [**Python version 3.7.7 (or upper)**](https://www.python.org/downloads/)
 
 - **Numpy** module version ***1.19.0***, to deal with matrixes and data
 ```bash
 pip install numpy
 ```
-- **Zhinst** module version ***20.1.1335*** *(from Zurich Instruments)*, to communicate with the HF2LI
+- **Zhinst**module version ***20.1.1335*** *(from Zurich Instruments)*, to communicate with the HF2LI
 ```bash
 pip install zhinst
 ```
@@ -72,7 +69,7 @@ If you want to run the source code than :
 ## How to use 
 ### setting up the application
 
-Here you can see the "Command" part of the GUI wich is divided in frames
+Here you can see the "Command" part of the GUI wich is divided in Tabs
 <img align="right" src=https://user-images.githubusercontent.com/52712038/91413626-b1b76980-e84b-11ea-93db-af86aac33f67.png> 
 - **Demods**
 In which you can select the demod you want and the data you want to plot from it
@@ -113,19 +110,16 @@ The application is protected by the CeCILL-C FREE SOFTWARE LICENSE AGREEMENT
 You can also read the full [LICENSE](https://cecill.info/licences/Licence_CeCILL-C_V1-en.txt)
 
 ## Contact, *Not for bug reports*
-You can contact me at adrianos.sidiras@gmail.com, however I no longer work on this project since it was for an internship
+You can contact me at adrianos.sidiras@gmail.com, however I no longer work on this project since it was for a 2 months internship
+## Special thanks
+I'd like to thank the [INL](https://inl.cnrs.fr/) and both of my internship tutors, Nicolas BABOUX and [David ALBERTINI](david.albertini[@]insa-lyon.fr) for the guidance they provided in this project, as well as Mehdi ALEM from the Zurich instruments support team which did an amazing job of explaining how to get advantage of the HF2LI programming features.
+
 ## Help 
 Please consider reading the manual to see commun errors if something goes wrong, and if the problem can't be solved i recommand you read Zurich instrument's manual 
 - [**HF2LI Manual**](https://www.zhinst.com/sites/default/files/documents/2020-03/ziHF2_UserManual_LabOne_20.01.0.pdf)
 - [**LabOne Programming Manual**](https://www.zhinst.com/sites/default/files/documents/2020-03/LabOneProgrammingManual_20.01.0.pdf)
 
 if you have the necessary knowledge i also encourage you to modify the source code so as to solve the problem and share your results with the community.
-
-	
-
-
-
-
 
 
  
