@@ -112,7 +112,7 @@ You can also read the full [**LICENSE**](https://cecill.info/licences/Licence_Ce
 ## Contact, *Not for bug reports*
 You can contact me at adrianos.sidiras@gmail.com, however I no longer work on this project since it was for a 2 months internship
 ## Special thanks
-I'd like to thank the [**INL**](https://inl.cnrs.fr/) and both of my internship tutors, Nicolas BABOUX and [David ALBERTINI](david.albertini[@]insa-lyon.fr) for the guidance they provided in this project, as well as Mehdi ALEM from the Zurich instruments support team which did an amazing job of explaining how to get advantage of the HF2LI programming features.
+I'd like to thank the [*INL*](https://inl.cnrs.fr/) and both of my internship tutors, Nicolas BABOUX and [David ALBERTINI](david.albertini[@]insa-lyon.fr) for the guidance they provided in this project, as well as Mehdi ALEM from the Zurich instruments support team which did an amazing job of explaining how to get advantage of the HF2LI programming features.
 
 ## Help 
 Please consider reading the manual to see commun errors if something goes wrong, and if the problem can't be solved i recommand you read Zurich instrument's manual 
