@@ -17,7 +17,7 @@
 
 ## About the project
 ### What is it for
-The goal of this application is to be able to bypass the limitation of using the 4 auxiliary signals of the HF2LI by taking the signals data dirrectly from the HF2LI through the USB port instead of coaxial cables. The application will **communicate with the HF2LI API using Python** to obtain all the demodulators data streams *(R, Theta, X, Y, Frequency)* we need and plot as many graphs as we want. It has more specificly been built for [DFRT](https://www.zhinst.com/europe/applications/scanning-probe-microscopy/dual-frequency-resonance-tracking-dfrt) [PFM](https://en.wikipedia.org/wiki/Piezoresponse_force_microscopy), you can also see [Guide](http://sondeslocales.fr/phpbb/viewtopic.php?f=9&t=11&sid=6467b8533a9bc63fe8b042f2ffd98704){:target="_blank"} of David ALBERTINI
+The goal of this application is to be able to bypass the limitation of using the 4 auxiliary signals of the HF2LI by taking the signals data dirrectly from the HF2LI through the USB port instead of coaxial cables. The application will **communicate with the HF2LI API using Python** to obtain all the demodulators data streams *(R, Theta, X, Y, Frequency)* we need and plot as many graphs as we want. It has more specificly been built for [DFRT](https://www.zhinst.com/europe/applications/scanning-probe-microscopy/dual-frequency-resonance-tracking-dfrt) [PFM](https://en.wikipedia.org/wiki/Piezoresponse_force_microscopy), you can also see [Guide](http://sondeslocales.fr/phpbb/viewtopic.php?f=9&t=11&sid=6467b8533a9bc63fe8b042f2ffd98704) of David ALBERTINI
 
 ## Getting started
 ### Prerequisites
