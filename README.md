@@ -86,7 +86,7 @@ In which you can select the demod you want and the data you want to plot from it
 - **Save**
 	- **Sample** is the sample name, it will change the name of the files that will be saved, the files will be saved in a different folder that will be named ***"Year-Month-Day"*** and the files in it will be ***"Hour-Minute-Second ; SampleName ; HF2LI id ; demods X sample,Y ; frame Z trace.format"*** and another named the same with **retrace** at the end. **X** is the demod number **Y** the demod data **Z** the number of the frame being saved and **format** the format which can be **csv** or **gwy** 
 **TLDR name of sample**
-	- **Save after image** check if you want to save
+	- **Save image** check if you want to save
 	- **Save to custom dir** check if you want to save in the directory you've chosen instead of the default adress
 	- **Custom Directory Path** the path to your custom adress, you can click in the **"..."** button to choose one instead of typing
 
