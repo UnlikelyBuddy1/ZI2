@@ -107,7 +107,7 @@ The application is protected by the CeCILL-C FREE SOFTWARE LICENSE AGREEMENT
 
 *"The purpose of this Free Software license agreement is to grant users the right to modify and re-use the software governed by this license. The exercising of this right is conditional upon the obligation to make available to the community the modifications made to the source code of the software so as to contribute to its evolution."*
 
-You can also read the full [**LICENSE**](https://cecill.info/licences/Licence_CeCILL-C_V1-en.txt)
+You can also read the full [*LICENSE*](https://cecill.info/licences/Licence_CeCILL-C_V1-en.txt)
 
 ## Contact, *Not for bug reports*
 You can contact me at adrianos.sidiras@gmail.com, however I no longer work on this project since it was for a 2 months internship
