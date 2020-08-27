@@ -32,7 +32,7 @@ There are two ways of running this application, either using an simple ***EXE***
 ```bash
 pip install numpy
 ```
-- [**Zhinst**](https://pypi.org/project/zhinst/) module version ***20.1.1335*** *(from Zurich Instruments)*, to communicate with the HF2LI
+- **Zhinst** module version ***20.1.1335*** *(from Zurich Instruments)*, to communicate with the HF2LI
 ```bash
 pip install zhinst
 ```
