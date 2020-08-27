@@ -74,6 +74,7 @@ Here you can see the "Command" part of the GUI wich is divided in Tabs
 <img align="right" src=https://user-images.githubusercontent.com/52712038/91413626-b1b76980-e84b-11ea-93db-af86aac33f67.png> 
 - **Demods**
 In which you can select the demod you want and the data you want to plot from it
+
 - **Settings** *(line by line)*
 	- Tell the software in which direction the microscope is scanning by clicking on **"Up-Down"** which changes to **"Down-up"** and vice versa so that the application starts plotting in the right dirrection. If you make a mistake you can just click on **"Flip"** to Flip the image.
 	- **Draw** represents the number of Images you want to make, if you have the Nanoscope V and HF2LI then put 0, it will run continuously like the Nanoscope V does and synchronize with it. If you put another number than 0 the process won't be synchronized but it will make the number of images you requested. **TLDR : Let it at 0 unless you know what you're doing**
@@ -81,17 +82,20 @@ In which you can select the demod you want and the data you want to plot from it
 	- **Freq** is the frequency of line scanning (number of lines per second) **put the same as in the Nanoscope V software** (capped at 4hz)
 	- **Display mode** let's you select wether you want to see the trace or retrace of the AFM image, however both are saved so it's just for visualisation
 	- **Color** is just the color grading for the scale in the 3D graphs
+
 - **Save**
 	- **Sample** is the sample name, it will change the name of the files that will be saved, the files will be saved in a different folder that will be named ***"Year-Month-Day"*** and the files in it will be ***"Hour-Minute-Second : SampleName : HF2LI id : demods X sample,Y : frame Z trace.format"*** and another named the same with **retrace** at the end. **X** is the demod number **Y** the demod data **Z** the number of the frame being saved and **format** the format which can be **csv** or **gwy** 
 **TLDR name of sample**
 	- **Save after image** check if you want to save
 	- **Save to custom dir** check if you want to save in the directory you've chosen instead of the default adress
 	- **Custom Directory Path** the path to your custom adress, you can click in the **"..."** button to choose one instead of typing
+
 - **Connexion & more** (appears if you check advanced settings)
 	- **Connect at launch**, simply does the same thing as if you where to click the connect button but it does it automaticaly when you launch the application
 	- **Hostame and port**, let those at default value if you connect to the HF2LI via USB
 	- **Manual sampling rate**, allows you to overwrite the sampling rates set by the application in order to acquire the trigger signals correctly, read the [**manual**](manual) for more information on that.
 	- **Save to gwy and save to csv** allows you to chose in which format you want to save your data, you can select both.
+
 - **Controls**
 	- **Reset** , resets all the images and waits for a Vertical Trigger from the Nanoscope V to plot
 	- **Pause** , pauses the graphs but does not pause the sampling process, so it's just a graphical pause but not a real pause
