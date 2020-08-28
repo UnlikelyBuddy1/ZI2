@@ -1,5 +1,6 @@
 [![Github Releases](https://img.shields.io/github/downloads/UnlikelyBuddy1/Zi2/total)]()
 [![Github Repo-size](https://img.shields.io/github/repo-size/UnlikelyBuddy1/Zi2)]()
+<img src=https://img.shields.io/badge/licence-CeCiLL--C-green>
 ## Table of contents
 
 <img align="right" src=https://user-images.githubusercontent.com/52712038/91175054-79dfe300-e6e0-11ea-98a7-9cae7162c29f.png> 
