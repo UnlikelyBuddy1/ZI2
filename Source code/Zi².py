@@ -687,8 +687,8 @@ def animate(i):
                                 sample_loss += 1
                                 sample_loss_indexs.append(index)
                         if sample_loss != 0:
-                            logs_text.insert('end', "there has been {} sample(s) lost at pixels {} in line {}\n".format(
-                                sample_loss, sample_loss_indexs, line_number))
+                            logs_text.insert('end', "there has been {} sample(s) lost in line {}\n".format(
+                                sample_loss, line_number))
                         if first_range!= 0:
                             min_r[signal_path] = np.nanmin(value)
                             max_r[signal_path] = np.nanmax(value)
