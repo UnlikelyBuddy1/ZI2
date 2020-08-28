@@ -38,7 +38,7 @@ pip install numpy
 ```bash
 pip install zhinst
 ```
-- **Matplotlib** module version ***3.2.2*** *(upper versions don't work if you want the EXE)*, to do annimated 3D plotting 
+- **Matplotlib** module version ***3.2.2*** *(upper versions don't work if you want to create an EXE)*, to do annimated 3D plotting 
 ```bash
 pip install matplotlib==3.2.2
 ```
@@ -61,8 +61,8 @@ Like i said there no installer, just a folder wich contains all the necessary fi
 If you want the Windows EXE version than :
 - **download** the Github repository as a ZIP
 - **UnZIP** it and open it
-- **UnZIP** the *"Zi²"* part 1 *(had to be on two parts because >25MB)*
-- **Open** the folder *"Zi²"* and find the executable named *"Zi²"*
+- **UnZIP** the *"Zi².rar"*
+- **Open** the folder *"Zi²"* and find the executable named *"Zi².exe"*
 
 If you want to run the source code than :
 - **download** the Github repository as a ZIP
