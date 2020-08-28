@@ -1,522 +1,43 @@
 # This code has been made by Adrianos SIDIRAS GALANTE for the INL
 # region LICENSE (EN)
 """
-CeCILL-C FREE SOFTWARE LICENSE AGREEMENT
+Copyright or © or Copr. Adrianos SIDIRAS GALANTE
+contributor(s) : David ALBERTINI, INL CNRS UMR 5270 (31/08/2020)
 
+[adrianos.sidiras@gmail.com]
 
-    Notice
+This software is a computer program whose purpose is to be able to bypass 
+the limitation of using the 4 auxiliary signals of the HF2LI by taking 
+the signals data dirrectly from the HF2LI through the USB port instead of coaxial cables.
+ The application will communicate with the HF2LI API using Python to obtain 
+ all the demodulators data streams (R, Theta, X, Y, Frequency) we need 
+ and plot as many graphs as we want. It has more specificly been built for PFM with DFRT.
 
-This Agreement is a Free Software license agreement that is the result
-of discussions between its authors in order to ensure compliance with
-the two main principles guiding its drafting:
+This software is governed by the [CeCILL|CeCILL-B|CeCILL-C] license under French law and
+abiding by the rules of distribution of free software.  You can  use, 
+modify and/ or redistribute the software under the terms of the [CeCILL|CeCILL-B|CeCILL-C]
+license as circulated by CEA, CNRS and INRIA at the following URL
+"http://www.cecill.info". 
 
-    * firstly, compliance with the principles governing the distribution
-      of Free Software: access to source code, broad rights granted to
-      users,
-    * secondly, the election of a governing law, French law, with which
-      it is conformant, both as regards the law of torts and
-      intellectual property law, and the protection that it offers to
-      both authors and holders of the economic rights over software.
-
-The authors of the CeCILL-C (for Ce[a] C[nrs] I[nria] L[ogiciel] L[ibre])
-license are:
-
-Commissariat � l'Energie Atomique - CEA, a public scientific, technical
-and industrial research establishment, having its principal place of
-business at 25 rue Leblanc, immeuble Le Ponant D, 75015 Paris, France.
-
-Centre National de la Recherche Scientifique - CNRS, a public scientific
-and technological establishment, having its principal place of business
-at 3 rue Michel-Ange, 75794 Paris cedex 16, France.
-
-Institut National de Recherche en Informatique et en Automatique -
-INRIA, a public scientific and technological establishment, having its
-principal place of business at Domaine de Voluceau, Rocquencourt, BP
-105, 78153 Le Chesnay cedex, France.
-
-
-    Preamble
-
-The purpose of this Free Software license agreement is to grant users
-the right to modify and re-use the software governed by this license.
-
-The exercising of this right is conditional upon the obligation to make
-available to the community the modifications made to the source code of
-the software so as to contribute to its evolution.
-
-In consideration of access to the source code and the rights to copy,
+As a counterpart to the access to the source code and  rights to copy,
 modify and redistribute granted by the license, users are provided only
-with a limited warranty and the software's author, the holder of the
-economic rights, and the successive licensors only have limited liability.
-
-In this respect, the risks associated with loading, using, modifying
-and/or developing or reproducing the software by the user are brought to
-the user's attention, given its Free Software status, which may make it
-complicated to use, with the result that its use is reserved for
-developers and experienced professionals having in-depth computer
-knowledge. Users are therefore encouraged to load and test the
-suitability of the software as regards their requirements in conditions
-enabling the security of their systems and/or data to be ensured and,
-more generally, to use and operate it in the same conditions of
-security. This Agreement may be freely reproduced and published,
-provided it is not altered, and that no provisions are either added or
-removed herefrom.
-
-This Agreement may apply to any or all software for which the holder of
-the economic rights decides to submit the use thereof to its provisions.
-
-
-    Article 1 - DEFINITIONS
-
-For the purpose of this Agreement, when the following expressions
-commence with a capital letter, they shall have the following meaning:
-
-Agreement: means this license agreement, and its possible subsequent
-versions and annexes.
-
-Software: means the software in its Object Code and/or Source Code form
-and, where applicable, its documentation, "as is" when the Licensee
-accepts the Agreement.
-
-Initial Software: means the Software in its Source Code and possibly its
-Object Code form and, where applicable, its documentation, "as is" when
-it is first distributed under the terms and conditions of the Agreement.
-
-Modified Software: means the Software modified by at least one
-Integrated Contribution.
-
-Source Code: means all the Software's instructions and program lines to
-which access is required so as to modify the Software.
-
-Object Code: means the binary files originating from the compilation of
-the Source Code.
-
-Holder: means the holder(s) of the economic rights over the Initial
-Software.
-
-Licensee: means the Software user(s) having accepted the Agreement.
-
-Contributor: means a Licensee having made at least one Integrated
-Contribution.
-
-Licensor: means the Holder, or any other individual or legal entity, who
-distributes the Software under the Agreement.
-
-Integrated Contribution: means any or all modifications, corrections,
-translations, adaptations and/or new functions integrated into the
-Source Code by any or all Contributors.
-.pack(side='top', fill='both', expand=True)Related Module: means a set of sources files including their
-documentation that, without modification to the Source Code, enables
-supplementary functions or services in addition to those offered by the
-Software.
-
-Derivative Software: means any combination of the Software, modified or
-not, and of a Related Module.
-
-Parties: mean both the Licensee and the Licensor.
-
-These expressions may be used both in singular and plural form.
-
-
-    Article 2 - PURPOSE
-
-The purpose of the Agreement is the grant by the Licensor to the
-Licensee of a non-exclusive, transferable and worldwide license for the
-Software as set forth in Article 5 hereinafter for the whole term of the
-protection granted by the rights over said Software. 
-
-
-    Article 3 - ACCEPTANCE
-
-3.1 The Licensee shall be deemed as having accepted the terms and
-conditions of this Agreement upon the occurrence of the first of the
-following events:
-
-    * (i) loading the Software by any or all means, notably, by
-      downloading from a remote server, or by loading from a physical
-      medium;
-    * (ii) the first time the Licensee exercises any of the rights
-      granted hereunder.
-
-3.2 One copy of the Agreement, containing a notice relating to the
-characteristics of the Software, to the limited warranty, and to the
-fact that its use is restricted to experienced users has been provided
-to the Licensee prior to its acceptance as set forth in Article 3.1
-hereinabove, and the Licensee hereby acknowledges that it has read and
-understood it.
-
-
-    Article 4 - EFFECTIVE DATE AND TERM
-
-
-      4.1 EFFECTIVE DATE
-
-The Agreement shall become effective on the date when it is accepted by
-the Licensee as set forth in Article 3.1.
-
-
-      4.2 TERM
-
-The Agreement shall remain in force for the entire legal term of
-protection of the economic rights over the Software.
-
-
-    Article 5 - SCOPE OF RIGHTS GRANTED
-
-The Licensor hereby grants to the Licensee, who accepts, the following
-rights over the Software for any or all use, and for the term of the
-Agreement, on the basis of the terms and conditions set forth hereinafter.
-
-Besides, if the Licensor owns or comes to own one or more patents
-protecting all or part of the functions of the Software or of its
-components, the Licensor undertakes not to enforce the rights granted by
-these patents against successive Licensees using, exploiting or
-modifying the Software. If these patents are transferred, the Licensor
-undertakes to have the transferees subscribe to the obligations set
-forth in this paragraph.
-
-
-      5.1 RIGHT OF USE
-
-The Licensee is authorized to use the Software, without any limitation
-as to its fields of application, with it being hereinafter specified
-that this comprises:
-
-   1. permanent or temporary reproduction of all or part of the Software
-      by any or all means and in any or all form.
-
-   2. loading, displaying, running, or storing the Software on any or
-      all medium.
-
-   3. entitlement to observe, study or test its operation so as to
-      determine the ideas and principles behind any or all constituent
-      elements of said Software. This shall apply when the Licensee
-      carries out any or all loading, displaying, running, transmission
-      or storage operation as regards the Software, that it is entitled
-      to carry out hereunder.
-
-
-      5.2 RIGHT OF MODIFICATION
-
-The right of modification includes the right to translate, adapt,
-arrange, or make any or all modifications to the Software, and the right
-to reproduce the resulting software. It includes, in particular, the
-right to create a Derivative Software.
-
-The Licensee is authorized to make any or all modification to the
-Software provided that it includes an explicit notice that it is the
-author of said modification and indicates the date of the creation thereof.
-
-
-      5.3 RIGHT OF DISTRIBUTION
-
-In particular, the right of distribution includes the right to publish,
-transmit and communicate the Software to the general public on any or
-all medium, and by any or all means, and the right to market, either in
-consideration of a fee, or free of charge, one or more copies of the
-Software by any means.
-
-The Licensee is further authorized to distribute copies of the modified
-or unmodified Software to third parties according to the terms and
-conditions set forth hereinafter.
-
-
-        5.3.1 DISTRIBUTION OF SOFTWARE WITHOUT MODIFICATION
-
-The Licensee is authorized to distribute true copies of the Software in
-Source Code or Object Code form, provided that said distribution
-complies with all the provisions of the Agreement and is accompanied by:
-
-   1. a copy of the Agreement,
-
-   2. a notice relating to the limitation of both the Licensor's
-      warranty and liability as set forth in Articles 8 and 9,
-
-and that, in the event that only the Object Code of the Software is
-redistributed, the Licensee allows effective access to the full Source
-Code of the Software at a minimum during the entire period of its
-distribution of the Software, it being understood that the additional
-cost of acquiring the Source Code shall not exceed the cost of
-transferring the data.
-
-
-        5.3.2 DISTRIBUTION OF MODIFIED SOFTWARE
-
-When the Licensee makes an Integrated Contribution to the Software, the
-terms and conditions for the distribution of the resulting Modified
-Software become subject to all the provisions of this Agreement.
-
-The Licensee is authorized to distribute the Modified Software, in
-source code or object code form, provided that said distribution
-complies with all the provisions of the Agreement and is accompanied by:
-
-   1. a copy of the Agreement,
-
-   2. a notice relating to the limitation of both the Licensor's
-      warranty and liability as set forth in Articles 8 and 9,
-
-and that, in the event that only the object code of the Modified
-Software is redistributed, the Licensee allows effective access to the
-full source code of the Modified Software at a minimum during the entire
-period of its distribution of the Modified Software, it being understood
-that the additional cost of acquiring the source code shall not exceed
-the cost of transferring the data.
-
-
-        5.3.3 DISTRIBUTION OF DERIVATIVE SOFTWARE
-
-When the Licensee creates Derivative Software, this Derivative Software
-may be distributed under a license agreement other than this Agreement,
-subject to compliance with the requirement to include a notice
-concerning the rights over the Software as defined in Article 6.4.
-In the event the creation of the Derivative Software required modification 
-of the Source Code, the Licensee undertakes that:
-
-   1. the resulting Modified Software will be governed by this Agreement,
-   2. the Integrated Contributions in the resulting Modified Software
-      will be clearly identified and documented,
-   3. the Licensee will allow effective access to the source code of the
-      Modified Software, at a minimum during the entire period of
-      distribution of the Derivative Software, such that such
-      modifications may be carried over in a subsequent version of the
-      Software; it being understood that the additional cost of
-      purchasing the source code of the Modified Software shall not
-      exceed the cost of transferring the data.
-
-
-        5.3.4 COMPATIBILITY WITH THE CeCILL LICENSE
-
-When a Modified Software contains an Integrated Contribution subject to
-the CeCILL license agreement, or when a Derivative Software contains a
-Related Module subject to the CeCILL license agreement, the provisions
-set forth in the third item of Article 6.4 are optional.
-
-
-    Article 6 - INTELLECTUAL PROPERTY
-
-
-      6.1 OVER THE INITIAL SOFTWARE
-
-The Holder owns the economic rights over the Initial Software. Any or
-all use of the Initial Software is subject to compliance with the terms
-and conditions under which the Holder has elected to distribute its work
-and no one shall be entitled to modify the terms and conditions for the
-distribution of said Initial Software.
-
-The Holder undertakes that the Initial Software will remain ruled at
-least by this Agreement, for the duration set forth in Article 4.2.
-
-
-      6.2 OVER THE INTEGRATED CONTRIBUTIONS
-
-The Licensee who develops an Integrated Contribution is the owner of the
-intellectual property rights over this Contribution as defined by
-applicable law.
-
-
-      6.3 OVER THE RELATED MODULES
-
-The Licensee who develops a Related Module is the owner of the
-intellectual property rights over this Related Module as defined by
-applicable law and is free to choose the type of agreement that shall
-govern its distribution under the conditions defined in Article 5.3.3.
-
-
-      6.4 NOTICE OF RIGHTS
-
-The Licensee expressly undertakes:
-
-   1. not to remove, or modify, in any manner, the intellectual property
-      notices attached to the Software;
-
-   2. to reproduce said notices, in an identical manner, in the copies
-      of the Software modified or not;
-
-   3. to ensure that use of the Software, its intellectual property
-      notices and the fact that it is governed by the Agreement is
-      indicated in a text that is easily accessible, specifically from
-      the interface of any Derivative Software.
-
-The Licensee undertakes not to directly or indirectly infringe the
-intellectual property rights of the Holder and/or Contributors on the
-Software and to take, where applicable, vis-�-vis its staff, any and all
-measures required to ensure respect of said intellectual property rights
-of the Holder and/or Contributors.
-
-
-    Article 7 - RELATED SERVICES
-
-7.1 Under no circumstances shall the Agreement oblige the Licensor to
-provide technical assistance or maintenance services for the Software.
-
-However, the Licensor is entitled to offer this type of services. The
-terms and conditions of such technical assistance, and/or such
-maintenance, shall be set forth in a separate instrument. Only the
-Licensor offering said maintenance and/or technical assistance services
-shall incur liability therefor.
-
-7.2 Similarly, any Licensor is entitled to offer to its licensees, under
-its sole responsibility, a warranty, that shall only be binding upon
-itself, for the redistribution of the Software and/or the Modified
-Software, under terms and conditions that it is free to decide. Said
-warranty, and the financial terms and conditions of its application,
-shall be subject of a separate instrument executed between the Licensor
-and the Licensee.
-
-
-    Article 8 - LIABILITY
-
-8.1 Subject to the provisions of Article 8.2, the Licensee shall be
-entitled to claim compensation for any direct loss it may have suffered
-from the Software as a result of a fault on the part of the relevant
-Licensor, subject to providing evidence thereof.
-
-8.2 The Licensor's liability is limited to the commitments made under
-this Agreement and shall not be incurred as a result of in particular:
-(i) loss due the Licensee's total or partial failure to fulfill its
-obligations, (ii) direct or consequential loss that is suffered by the
-Licensee due to the use or performance of the Software, and (iii) more
-generally, any consequential loss. In particular the Parties expressly
-agree that any or all pecuniary or business loss (i.e. loss of data,
-loss of profits, operating loss, loss of customers or orders,
-opportunity cost, any disturbance to business activities) or any or all
-legal proceedings instituted against the Licensee by a third party,
-shall constitute consequential loss and shall not provide entitlement to
-any or all compensation from the Licensor.
-
-
-    Article 9 - WARRANTY
-
-9.1 The Licensee acknowledges that the scientific and technical
-state-of-the-art when the Software was distributed did not enable all
-possible uses to be tested and verified, nor for the presence of
-possible defects to be detected. In this respect, the Licensee's
-attention has been drawn to the risks associated with loading, using,
-modifying and/or developing and reproducing the Software which are
-reserved for experienced users.
-
-The Licensee shall be responsible for verifying, by any or all means,
-the suitability of the product for its requirements, its good working
-order, and for ensuring that it shall not cause damage to either persons
-or properties.
-
-9.2 The Licensor hereby represents, in good faith, that it is entitled
-to grant all the rights over the Software (including in particular the
-rights set forth in Article 5).
-
-9.3 The Licensee acknowledges that the Software is supplied "as is" by
-the Licensor without any other express or tacit warranty, other than
-that provided for in Article 9.2 and, in particular, without any warranty
-as to its commercial value, its secured, safe, innovative or relevant
-nature.
-
-Specifically, the Licensor does not warrant that the Software is free
-from any error, that it will operate without interruption, that it will
-be compatible with the Licensee's own equipment and software
-configuration, nor that it will meet the Licensee's requirements.
-
-9.4 The Licensor does not either expressly or tacitly warrant that the
-Software does not infringe any third party intellectual property right
-relating to a patent, software or any other property right. Therefore,
-the Licensor disclaims any and all liability towards the Licensee
-arising out of any or all proceedings for infringement that may be
-instituted in respect of the use, modification and redistribution of the
-Software. Nevertheless, should such proceedings be instituted against
-the Licensee, the Licensor shall provide it with technical and legal
-assistance for its defense. Such technical and legal assistance shall be
-decided on a case-by-case basis between the relevant Licensor and the
-Licensee pursuant to a memorandum of understanding. The Licensor
-disclaims any and all liability as regards the Licensee's use of the
-name of the Software. No warranty is given as regards the existence of
-prior rights over the name of the Software or as regards the existence
-of a trademark.
-
-
-    Article 10 - TERMINATION
-
-10.1 In the event of a breach by the Licensee of its obligations
-hereunder, the Licensor may automatically terminate this Agreement
-thirty (30) days after notice has been sent to the Licensee and has
-remained ineffective.
-
-10.2 A Licensee whose Agreement is terminated shall no longer be
-authorized to use, modify or distribute the Software. However, any
-licenses that it may have granted prior to termination of the Agreement
-shall remain valid subject to their having been granted in compliance
-with the terms and conditions hereof.
-
-
-    Article 11 - MISCELLANEOUS
-
-
-      11.1 EXCUSABLE EVENTS
-
-Neither Party shall be liable for any or all delay, or failure to
-perform the Agreement, that may be attributable to an event of force
-majeure, an act of God or an outside cause, such as defective
-functioning or interruptions of the electricity or telecommunications
-networks, network paralysis following a virus attack, intervention by
-government authorities, natural disasters, water damage, earthquakes,
-fire, explosions, strikes and labor unrest, war, etc.
-
-11.2 Any failure by either Party, on one or more occasions, to invoke
-one or more of the provisions hereof, shall under no circumstances be
-interpreted as being a waiver by the interested Party of its right to
-invoke said provision(s) subsequently.
-
-11.3 The Agreement cancels and replaces any or all previous agreements,
-whether written or oral, between the Parties and having the same
-purpose, and constitutes the entirety of the agreement between said
-Parties concerning said purpose. No supplement or modification to the
-terms and conditions hereof shall be effective as between the Parties
-unless it is made in writing and signed by their duly authorized
-representatives.
-
-11.4 In the event that one or more of the provisions hereof were to
-conflict with a current or future applicable act or legislative text,
-said act or legislative text shall prevail, and the Parties shall make
-the necessary amendments so as to comply with said act or legislative
-text. All other provisions shall remain effective. Similarly, invalidity
-of a provision of the Agreement, for any reason whatsoever, shall not
-cause the Agreement as a whole to be invalid.
-
-
-      11.5 LANGUAGE
-
-The Agreement is drafted in both French and English and both versions
-are deemed authentic.
-
-
-    Article 12 - NEW VERSIONS OF THE AGREEMENT
-
-12.1 Any person is authorized to duplicate and distribute copies of this
-Agreement.
-
-12.2 So as to ensure coherence, the wording of this Agreement is
-protected and may only be modified by the authors of the License, who
-reserve the right to periodically publish updates or new versions of the
-Agreement, each with a separate number. These subsequent versions may
-address new issues encountered by Free Software.
-
-12.3 Any Software distributed under a given version of the Agreement may
-only be subsequently distributed under the same version of the Agreement
-or a subsequent version.
-
-
-    Article 13 - GOVERNING LAW AND JURISDICTION
-
-13.1 The Agreement is governed by French law. The Parties agree to
-endeavor to seek an amicable solution to any disagreements or disputes
-that may arise during the performance of the Agreement.
-
-13.2 Failing an amicable solution within two (2) months as from their
-occurrence, and unless emergency proceedings are necessary, the
-disagreements or disputes shall be referred to the Paris Courts having
-jurisdiction, by the more diligent Party.
-
-
-Version 1.0 dated 2006-09-05.
-
+with a limited warranty  and the software's author,  the holder of the
+economic rights,  and the successive licensors  have only  limited
+liability. 
+
+In this respect, the user's attention is drawn to the risks associated
+with loading,  using,  modifying and/or developing or reproducing the
+software by the user in light of its specific status of free software,
+that may mean  that it is complicated to manipulate,  and  that  also
+therefore means  that it is reserved for developers  and  experienced
+professionals having in-depth computer knowledge. Users are therefore
+encouraged to load and test the software's suitability as regards their
+requirements in conditions enabling the security of their systems and/or 
+data to be ensured and,  more generally, to use and operate it in the 
+same conditions as regards security. 
+
+The fact that you are presently reading this means that you have had
+knowledge of the [CeCILL|CeCILL-B|CeCILL-C] license and that you accept its terms.
 """
 # endregion
 # region Imports
@@ -560,6 +81,7 @@ size_min_limit = 31
 size_max_limit = 4096
 frequency_min_limit = 0.1
 frequency_max_limit = 4.1
+
 launch = 1
 ani = None  # defining ani for animation as a global variable, otherwise it won't work with Tkinter and the GUI
 """
@@ -571,18 +93,17 @@ end_of_frame = '.TrigDio1'
 
 entries_fieldnames=['draw','size','freq','trace_mode','color','save_after_image']
 # endregion
-# Graphical user Interface
-# region colors
+# region GUI colors theme
 # default
-light_gray_color = "#333333"  # 333333
-dark_gray_color = "#1e1e1e"  # 1e1e1e
-white_color = "#f1f1f1"  # f1f1f1
-accent_color = "#007acc"  # 007acc
-connect_color = "#eaa100"  # eaa100
-start_color = "#ff830f"  # ff830f
-selected_color = "#252526"  # 252526
+light_gray_color = "#333333"
+dark_gray_color = "#1e1e1e"
+white_color = "#f1f1f1"
+accent_color = "#007acc" 
+connect_color = "#eaa100" 
+start_color = "#ff830f"
+selected_color = "#252526"
 #endregion
-# region Root declaration and config
+# region GUI Root declaration and config
 """
 Here is the definition of the main window which is called root
 we also define the background color and the icon image, 
@@ -634,7 +155,7 @@ else:
     root.attributes('-zoomed', True)
 
 # endregion
-# region FRAMES
+# region GUI FRAMES
 """
 Here is the definition of all the frames that are in our GUI 
 Frames act like Window inside a bigger window, they are usefull when it 
@@ -683,7 +204,7 @@ controls_frame.configure(background=dark_gray_color, fg='#f1f1f1',
                          highlightbackground=dark_gray_color, highlightcolor=dark_gray_color)
 controls_frame.grid(row=4, column=0, columnspan=4, sticky=N+E+W)
 # endregion
-# region logs
+# region GUI logs
 """
 Here is the logging window, in which you'll be able to see what the program does 
 and also have an instant feedback and explaination if an error occurs
@@ -746,7 +267,7 @@ show_logs_button = Button(configuration_frame, text="Show logs", padx=0, pady=0,
                           bd=1, highlightbackground=dark_gray_color, highlightcolor=selected_color, command=show_log)
 show_logs_button.grid(row=8, column=2, columnspan=2, sticky=W+N+E+S)
 # endregion
-# region logs scrollbar
+# region GUI logs scrollbar
 """
 Here is the scrollbar, it is usefull when your logs are full of text and you need to scroll down
 it's just a nice addition. If it bothers you, you can just comment the three following lines using "#" and get rid of it
@@ -756,11 +277,11 @@ scrollbar = Scrollbar(logs, command=logs_text.yview,
 scrollbar.grid(row=0, column=5, sticky=N+E+W+S)
 logs_text.configure(yscrollcommand=scrollbar.set)
 # endregion
-#region found all files 
+# region check all folders are present
 if(os.path.isfile(current_directory+'/configs/entries.csv'))and(os.path.isfile(current_directory+'/configs/configs.csv'))and(os.path.isfile(current_directory+'/configs/connexion.csv')):
     logs_text.insert('end',"- all the config files are present\n")
 #endregion
-# region plotting canvas INIT
+# region GUI graphs initialisation
 """
 Here we define our Canvas and figure, without those we can't plot anything.
 We also state that we want our figures to be drawn inside of our GUI insted of on an other window
@@ -771,13 +292,12 @@ ratio=round(ratio,1)
 screen_size=h/111
 screen_size_small=screen_size*0.979
 fig = plt.figure(figsize=(screen_size_small*ratio, screen_size), facecolor=dark_gray_color)
-fig.suptitle('DEMODs',  fontsize=16, family="sans-serif",
+fig.suptitle('Zi²',  fontsize=16, family="sans-serif",
              color=accent_color, fontweight="bold")
 canvas = FigureCanvasTkAgg(fig, master=ploting_frame)
 canvas_widget = canvas.get_tk_widget()
 # endregion
-# Main frame
-# region DEMODS
+# region GUI Demodulators list to put in graphs
 """
 Here is the definition of what is inside the Demods and Pids frame
 You can manually add sample options if you need to
@@ -865,8 +385,7 @@ sample_selection[add_count].grid(
     row=current_row+add_count, column=1, columnspan=3, sticky=W+N+E+S)
 add_count += 1
 # endregion
-# Settings frame
-# region frames to draw
+# region GUI frames to draw
 """
 Here we define the number of frames to draw.
 Be carefull, if you input 0 than it will work in endless mode and scan with the microscope
@@ -877,21 +396,21 @@ frames_to_draw_entry = Entry(settings_frame, bg=light_gray_color, width=7, fg=ac
                              justify='center', highlightbackground="#2d2d30", highlightcolor=selected_color, bd=0)
 frames_to_draw_entry.grid(row=1, column=1, columnspan=2, sticky=W+E)
 # endregion
-# region Size Text And Entry
+# region GUI Size Text And Entry
 size_text = Label(settings_frame, text="Size : ", bg=dark_gray_color, fg=white_color,
                   justify='center').grid(row=2, column=0, sticky=W)  # put text on the window
 size_entry = Entry(settings_frame, bg=light_gray_color, width=7, fg=accent_color,
                    justify='center', highlightbackground="#2d2d30", highlightcolor=selected_color, bd=0)
 size_entry.grid(row=2, column=1, columnspan=2, sticky=W+E)
 # endregion
-# region Frequency Text And Entry
+# region GUI Frequency Text And Entry
 frequency_text = Label(settings_frame, text="Freq : ", bg=dark_gray_color, fg=white_color,
                        justify='center').grid(row=3, column=0, sticky=W)  # put text on the window
 frequency_entry = Entry(settings_frame, bg=light_gray_color, width=7, fg=accent_color,
                         justify='center', highlightbackground="#2d2d30", highlightcolor=selected_color, bd=0)
 frequency_entry.grid(row=3, column=1, columnspan=2, sticky=W+E)
 # endregion
-# region trace options + radio buttons
+# region GUI display modes
 trace_mode_radio = IntVar()
 trace_mode_text = Label(settings_frame, text="Display mode :", bg=dark_gray_color,
                         justify='left', fg=white_color).grid(row=4, column=0, columnspan=3, sticky=W)
@@ -900,7 +419,7 @@ Radiobutton(settings_frame, text="Trace", variable=trace_mode_radio, value=0, bg
 Radiobutton(settings_frame, text="Retrace", variable=trace_mode_radio, value=1, bg=dark_gray_color, fg=accent_color, justify='left',
             highlightbackground=dark_gray_color, highlightcolor=dark_gray_color).grid(row=6, column=0, columnspan=3, sticky=W)
 # endregion
-# region Save After Image + checkbox
+# region GUI save image 
 save_after_image_text = Label(
     save_frame, text="Save image", bg=dark_gray_color, fg=white_color, justify='left')
 save_after_image_checkbox_state = IntVar()
@@ -915,7 +434,7 @@ def check_save_default(*args):
 
 
 # endregion
-# region Sample name + gloabl vars
+# region GUI sample name + fieldnames
 fieldname = ['custom_save_directory',
              'custom_save_directory_adress', 'sample_name']
 logs_text.insert(
@@ -932,7 +451,7 @@ def sample_name_fct(*args):
                 save_to_custom_folder_entry.get()), fieldname[2]: '{}'.format(sample_name_entry.get())}
             csv_writer.writerow(line)
 # endregion
-# region Save to custom folder
+# region GUI save to custom directory
 
 
 def custom_save(*args):
@@ -1047,7 +566,7 @@ sample_name_entry.grid(row=0, column=1, columnspan=2, sticky=W)
 sample_name_var.trace("w", sample_name_fct)
 save_to_custom_folder_checkbox_state.trace("w", custom_save)
 # endregion
-# region Ask directory
+# region GUI button to Ask directory
 
 
 def askdir():
@@ -1079,7 +598,7 @@ askdir_button = Button(save_frame, text=" ... ", padx=0, pady=0, fg=white_color,
                        bd=1, highlightbackground=dark_gray_color, highlightcolor=selected_color, command=askdir)
 askdir_button.grid(row=3, column=2, sticky=W+N)
 # endregion
-# region choose CMAP
+# region GUI choose the graphs color (CMAP)
 img = {}
 """
 Here you can add more color options, however they will not have the previsualisation
@@ -1095,10 +614,10 @@ def change_image(*args):
     cmap = cmap_selected.get()
     cmap_selection.configure(bg=dark_gray_color)
     if(len(img) > 0):
-        cmap_selection.configure(image=img[cmap], fg=accent_color, highlightbackground=dark_gray_color,
-                                 highlightcolor=selected_color, bd=0, justify='center')
-    #logs_text.insert('end', "- you selected color : {} for plots\n".format(cmap))
-
+        try :
+            cmap_selection.configure(image=img[cmap], fg=accent_color, highlightbackground=dark_gray_color,highlightcolor=selected_color, bd=0, justify='center')
+        except :
+            pass
 
 for cmap in cmap_option:
     img_adress = '{}/colors/{}.png'.format(current_directory, cmap)
@@ -1111,12 +630,12 @@ cmap_selected.trace("w", change_image)
 cmap_selection = OptionMenu(settings_frame, cmap_selected, *cmap_option)
 cmap_selection.grid(row=7, column=1, columnspan=3, sticky=W)
 # endregion
-#region frequency delta
+# region GUI display the frequency delta
 frequency_delta_text = Label(toolbar_frame, text="", bg=dark_gray_color,
                          fg=white_color, justify='center')  # put text on the window
 frequency_delta_text.pack(side=RIGHT, fill=BOTH)
 #endregion
-# region animation
+# region Animation part 1
 line_number = 0
 frame_vertical_trace = 0  # 0 is top to bottom, 1 is bottom to top
 right_to_plot = 0
@@ -1153,7 +672,6 @@ def animate(i):
         if (data_read) and (right_to_plot != 0):  # if we have received data and we are not paused
             now = datetime.now()
             current_time = now.strftime("%Hh-%Mm-%Ss")
-            #logs_text.insert('end', "- new data has been acquired at {} \n".format(current_time))
             # if the data we want is in the returned signals
             returned_signal_paths = [signal_path.lower()for signal_path in data_read.keys()]
             graph_to_update_number = 1
@@ -1223,7 +741,7 @@ def animate(i):
             else:
                 pass
 #endregion
-#region save
+# region Save image 
             # here we save the data if we reach the bottom or top of the image
             if(line_number == (size)) or (line_number < 0):
                 """
@@ -1300,7 +818,7 @@ def animate(i):
                             logs_text.insert(
                                 'end', "- saved data at adress {} at {}\n".format(save_adress, current_time))
 #endregion
-#region annimate end
+# region Animation part 2
                 if(frame_vertical_trace == 0):
                     line_number += 1
                 else:
@@ -1319,7 +837,7 @@ def animate(i):
                     line_number = 0
 
 # endregion
-# region start
+# region GUI start button + Checking variables befor launching
 first_launch = 1
 
 def check_fct():
@@ -1536,7 +1054,7 @@ Start_button = Button(controls_frame, text="        START      ", padx=0, pady=0
                       bd=1, highlightbackground=dark_gray_color, highlightcolor=selected_color, command=check_fct)
 Start_button.grid(row=6, column=0, columnspan=3, sticky=S+W+E)
 # endregion
-# region pause
+# region GUI pause
 
 
 def pause():
@@ -1552,7 +1070,7 @@ pause_button = Button(controls_frame, width=8, text="Pause", padx=0, pady=0, fg=
                       bd=1, highlightbackground=dark_gray_color, highlightcolor=selected_color, command=pause)
 pause_button.grid(row=5, column=3, sticky=W+N+E)
 # endregion
-# region stop
+# region GUI stop
 
 
 def stop():
@@ -1654,7 +1172,7 @@ stop_button = Button(controls_frame, text=" STOP ", padx=0, pady=0, fg=white_col
                      bd=1, highlightbackground=dark_gray_color, highlightcolor=selected_color, command=stop)
 stop_button.grid(row=6, column=3, sticky=W+S+E)
 # endregion
-# region refresh
+# region GUI reset button
 
 
 def refresh():
@@ -1678,7 +1196,7 @@ refresh_button = Button(controls_frame, text="Reset", padx=0, pady=0, fg=white_c
                         bd=1, highlightbackground=dark_gray_color, highlightcolor=selected_color, command=refresh)
 refresh_button.grid(row=5, column=0, columnspan=3, sticky=W+N+E)
 # endregion
-# region up down dirrection
+# region GUI Up down dirrection
 def up_down():
     global frame_vertical_trace, line_number
     frame_vertical_trace = not frame_vertical_trace
@@ -1714,7 +1232,7 @@ else:
 up_down_button.grid(row=0, column=0, columnspan=3, sticky=W+N+E)
 flip_button.grid(row=0, column=3, sticky=W+N+E)
 # endregion
-#region READ entries
+# region read the values stored between each launch
 if(os.path.isfile(current_directory+'/configs/entries.csv')):
     with open(current_directory+'/configs/entries.csv', 'r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -1779,7 +1297,7 @@ def connect_me():
         connect_button.configure(bg="#eaa100")
         connected = 0
 # endregion
-#region Connection + Advanced settings
+# region GUI Connection + Advanced settings
 def check_save(*args):
     if (not(save_to_gwy_checkbox_state.get())) and (not(save_to_txt_checkbox_state.get())):
         save_after_image_checkbox_state.set(0)
@@ -1866,4 +1384,3 @@ if((autoconnect_checkbox_state.get() != 0) and (advanced_checkbox_state.get() !=
     connect_me()
 #endregion
 root.mainloop()
-
