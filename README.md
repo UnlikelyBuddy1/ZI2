@@ -6,6 +6,7 @@
 <img align="right" src=https://user-images.githubusercontent.com/52712038/91175054-79dfe300-e6e0-11ea-98a7-9cae7162c29f.png> 
 
 - [About the project](#about-the-project)
+	- [Disclaimer](#disclaimer)
 	- [What is it for ?](#what-is-it-for)
 - [Getting started !](#getting-started)
 	- [Prerequisites](#prerequisites)
@@ -18,6 +19,8 @@
 - [Help](#help)
 
 ## About the project
+### Disclaimer
+This application is not a replacement for the Zurich instruments Labone software, it is ment to be used along side it. You still have to use Labone and connect you instrument to it.
 ### What is it for
 The goal of this application is to be able to bypass the limitation of using the 4 auxiliary signals of the HF2LI by taking the signals data directly from the HF2LI through the USB port instead of coaxial cables. The application will **communicate with the HF2LI API using Python** to obtain all the demodulators data streams *(R, Theta, X, Y, Frequency)* we need and plot as many graphs as we want. It has more specifically been built for [DFRT](https://www.zhinst.com/europe/applications/scanning-probe-microscopy/dual-frequency-resonance-tracking-dfrt) [PFM](https://en.wikipedia.org/wiki/Piezoresponse_force_microscopy), you can also see [Guide](http://sondeslocales.fr/phpbb/viewtopic.php?f=9&t=11&sid=6467b8533a9bc63fe8b042f2ffd98704) of David ALBERTINI
 
