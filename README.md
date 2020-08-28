@@ -129,6 +129,10 @@ Please consider reading the manual to see common errors if something goes wrong,
 
 if you have the necessary knowledge i also encourage you to modify the source code so as to solve the problem and share your results with the community.
 
+Plotting noise :
+
+![image](https://user-images.githubusercontent.com/52712038/91551698-e8b07c80-e92a-11ea-9619-08ee8f9bcfd2.png)
+![image](https://user-images.githubusercontent.com/52712038/91551716-eea65d80-e92a-11ea-90e3-16f5a9edf2ce.png)
 
  
 
