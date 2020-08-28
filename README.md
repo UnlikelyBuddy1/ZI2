@@ -1,5 +1,4 @@
-[![Github Releases](https://img.shields.io/github/downloads/UnlikelyBuddy1/Zi2/total)]()
-[![Github Repo-size](https://img.shields.io/github/repo-size/UnlikelyBuddy1/Zi2)]()
+[<img src="https://img.shields.io/github/repo-size/UnlikelyBuddy1/Zi2.svg" alt="Repository size" />](https://github.com/UnlikelyBuddy1/Zi2) [<img src="https://img.shields.io/github/downloads/UnlikelyBuddy1/Zi2/total?color=lightgreen" alt="Downloads" />](https://github.com/UnlikelyBuddy1/ZI2/releases/tag/1.0.0)
 [<img src=https://img.shields.io/badge/license-CeCiLL--C-green>](https://cecill.info/index.en.html)
 ## Table of contents
 
