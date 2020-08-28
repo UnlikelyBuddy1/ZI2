@@ -1,6 +1,6 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![Github All Releases](https://img.shields.io/github/downloads/UnlikelyBuddy1/Zi2/total.svg)]()
-
+[![Github Repo-size](https://img.shields.io/github/repo-size/UnlikelyBuddy1/Zi2)]()
 ## Table of contents
 
 <img align="right" src=https://user-images.githubusercontent.com/52712038/91175054-79dfe300-e6e0-11ea-98a7-9cae7162c29f.png> 
