@@ -1,5 +1,5 @@
 [<img src="https://img.shields.io/github/repo-size/UnlikelyBuddy1/Zi2.svg" alt="Repository size" />](https://github.com/UnlikelyBuddy1/Zi2) 
-[<img src="https://img.shields.io/github/downloads/UnlikelyBuddy1/ZI2/total? color=lightgreen"/>](https://github.com/UnlikelyBuddy1/ZI2/releases/tag/1.0.0)
+![GitHub All Releases](https://img.shields.io/github/downloads/UnlikelyBuddy1/ZI2/total)
 [<img src=https://img.shields.io/badge/license-CeCiLL--C-green>](https://cecill.info/index.en.html)
 ## Table of contents
 
