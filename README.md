@@ -27,7 +27,7 @@ The goal of this application is to be able to bypass the limitation of using the
 ## Getting started
 ### Prerequisites
 There are two ways of running this application, either using an simple [***EXE***](https://github.com/UnlikelyBuddy1/ZI2/releases/download/1.0/Zi.rar) for **Windows** that has to be launched within its folder (because they contain all the python modules, application data etc...) and that requires no installer. 
-**Or** by **running the [source code](https://github.com/UnlikelyBuddy1/ZI2/archive/1.0.zip)** of the application with Python and all the modules. In which case you'll need :
+**Or** by **running the [Source code](https://github.com/UnlikelyBuddy1/ZI2/archive/1.0.zip)** of the application with Python and all the modules. In which case you'll need :
 - [**Python version 3.7.7 (or upper)**](https://www.python.org/downloads/)
 
 - **Numpy** module version ***1.19.0***, to deal with matrixes and data
@@ -68,7 +68,7 @@ If you want to run the source code than :
 - **download** the Github repository as a ZIP
 - **UnZIP** it and open it
 - **Go to** the folder named *"Source code"*
-- **find** the file *"[Zi².py](#table-of-contents)"*
+- **find** the file *"[Zi².py](https://github.com/UnlikelyBuddy1/ZI2/blob/master/Source%20code/Zi%C2%B2.py)"*
 - **Run** it with your editor (Python's IDLE, Vscode, etc...)
 
 ## How to use 
