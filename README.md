@@ -1,8 +1,6 @@
 [![GitHub All Releases](https://img.shields.io/github/repo-size/UnlikelyBuddy1/Zi2.svg?color=%23FFAB40&style=for-the-badge)](https://github.com/UnlikelyBuddy1/Zi2) 
 [![GitHub All Releases](https://img.shields.io/github/downloads/UnlikelyBuddy1/ZI2/total.svg?color=%23007ACC&style=for-the-badge)](https://github.com/UnlikelyBuddy1/ZI2/releases/tag/1.0) 
-[<img src=https://img.shields.io/badge/license-CeCiLL--C-green-S-for-the-badge>](https://cecill.info/index.en.html)
-[![image](https://img.shields.io/badge/license-CeCiLL?color=%23FFAB40&style=for-the-badge)](https://cecill.info/index.en.html)
-
+[![image](https://img.shields.io/static/v1?label=License&message=CeCiLL&color=#23333333&style=for-the-badge)](https://cecill.info/index.en.html)
 ## Table of contents
 
 <img align="right" src=https://user-images.githubusercontent.com/52712038/91175054-79dfe300-e6e0-11ea-98a7-9cae7162c29f.png> 
