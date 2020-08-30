@@ -63,6 +63,7 @@ If you want the Windows EXE version than :
 - **UnZIP** it and open it
 - **UnZIP** the *"Zi².rar"*
 - **Open** the folder *"Zi²"* and find the executable named *"Zi².exe"*
+- **Run it**, **INSIDE !** the Zi² folder or just make a shortcut to run it from anywhere
 
 If you want to run the source code than :
 - **download** the Github repository as a ZIP
