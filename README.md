@@ -1,6 +1,7 @@
 [<img src="https://img.shields.io/github/repo-size/UnlikelyBuddy1/Zi2.svg" alt="Repository size" />](https://github.com/UnlikelyBuddy1/Zi2) 
-![GitHub All Releases](https://img.shields.io/github/downloads/UnlikelyBuddy1/ZI2/total)
+![GitHub All Releases](https://img.shields.io/github/downloads/UnlikelyBuddy1/ZI2/total?color=%23007ACC)
 [<img src=https://img.shields.io/badge/license-CeCiLL--C-green>](https://cecill.info/index.en.html)
+
 ## Table of contents
 
 <img align="right" src=https://user-images.githubusercontent.com/52712038/91175054-79dfe300-e6e0-11ea-98a7-9cae7162c29f.png> 
