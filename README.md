@@ -97,7 +97,7 @@ In which you can select the demod you want and the data you want to plot from it
 - **Connexion & more** (appears if you check advanced settings)
 	- **Connect at launch**, simply does the same thing as if you where to click the connect button but it does it automatically when you launch the application
 	- **Hostame and port**, let those at default value if you connect to the HF2LI via USB
-	- **Manual sampling rate**, allows you to overwrite the sampling rates set by the application in order to acquire the trigger signals correctly, read the [**manual**](manual) for more information on that.
+	- **Manual sampling rate**, allows you to overwrite the sampling rates set by the application in order to acquire the trigger signals correctly, read the [**Zi² manual**](https://github.com/UnlikelyBuddy1/ZI2/releases/download/1.0/Zi.User.Manual.pdf) for more information on that.
 	- **Save to gwy and save to csv** allows you to chose in which format you want to save your data, you can select both.
 
 - **Controls**
@@ -127,6 +127,7 @@ I'd like to thank the [*INL*](https://inl.cnrs.fr/) and both of my internship tu
 Please consider reading the manual to see common errors if something goes wrong, and if the problem can't be solved i re-command you read Zurich instrument's manual 
 - [**HF2LI Manual**](https://www.zhinst.com/sites/default/files/documents/2020-03/ziHF2_UserManual_LabOne_20.01.0.pdf)
 - [**LabOne Programming Manual**](https://www.zhinst.com/sites/default/files/documents/2020-03/LabOneProgrammingManual_20.01.0.pdf)
+- [**Zi² Manual**](https://github.com/UnlikelyBuddy1/ZI2/releases/download/1.0/Zi.User.Manual.pdf)
 
 if you have the necessary knowledge i also encourage you to modify the source code so as to solve the problem and share your results with the community.
 
