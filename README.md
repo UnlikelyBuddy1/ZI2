@@ -148,6 +148,7 @@ now you will see the units of the data you are plotting
 ***Plotting some noise***
 ![image](https://user-images.githubusercontent.com/52712038/91551698-e8b07c80-e92a-11ea-9619-08ee8f9bcfd2.png)
 ![image](https://user-images.githubusercontent.com/52712038/91551716-eea65d80-e92a-11ea-90e3-16f5a9edf2ce.png)
+**Plotting data from a real sample**
 ![real sample](https://user-images.githubusercontent.com/52712038/91722214-3da5fa00-eb9a-11ea-9c79-39a65559f01e.png)
 ![real sample](https://user-images.githubusercontent.com/52712038/91722239-44cd0800-eb9a-11ea-8a13-4126adb9d2a3.png)
 
