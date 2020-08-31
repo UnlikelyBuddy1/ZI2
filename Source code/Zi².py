@@ -302,12 +302,8 @@ canvas_widget = canvas.get_tk_widget()
 Here is the definition of what is inside the Demods and Pids frame
 You can manually add sample options if you need to
 or Demod option if your device posseses more than 6
-
-The same goes for PIDs, if you need to see another thing than Error or value
-you can add it
-and if you have more than 4 PIDs you can add more
 """
-sample_option = ["r", "theta", "r & t", "x", "y", "frequency"]
+sample_option = ["r", "theta", "x", "y", "frequency", "auxin0", "auxin1", "xiy", "df"]
 demod_option = ["1", "2", "3", "4", "5", "6"]
 demods_frame = LabelFrame(main_frame, bg=dark_gray_color,
                           fg=white_color, padx=0, pady=0, bd=0)
@@ -682,7 +678,7 @@ def animate(i):
                 if signal_path.lower() in returned_signal_paths:
                     for index, signal_burst in enumerate(data_read[signal_path.lower()]):
                         value = signal_burst['value'][0, :]
-                        for index in range(0, len(value)):
+                        for index in range(0, len(value)):    
                             if np.isnan(value[index]):
                                 sample_loss += 1
                                 sample_loss_indexs.append(index)
@@ -897,18 +893,11 @@ def check_fct():
                 demod_number = (int(demod_selected[signal_number].get()))-1
                 demod_adress = '/demods/{}'.format(demod_number)
                 sample_number = sample_selected[signal_number].get()
-                if sample_number == sample_option[2]:
-                    for index in range(0, 2):
-                        sample_number = sample_option[index]
-                        sample_adress = '/sample.{}'.format(sample_number)
-                        signal_path = dev_adress+demod_adress+sample_adress
-                        signal_paths.append(signal_path)
-                else:
-                    sample_adress = '/sample.{}'.format(sample_number)
-                    signal_path = str(dev_adress+demod_adress+sample_adress)
-                    if sample_number == 'frequency':
-                        frequency_index.append(len(signal_paths))
-                    signal_paths.append(signal_path)
+                sample_adress = '/sample.{}'.format(sample_number)
+                signal_path = str(dev_adress+demod_adress+sample_adress)
+                if sample_number == 'frequency':
+                    frequency_index.append(len(signal_paths))
+                signal_paths.append(signal_path)
 
             signals_to_plot = len(signal_paths)
             if signals_to_plot > 9:
@@ -1002,15 +991,11 @@ def check_fct():
                 tittle = str(signal_paths[i-1])
                 tittle = tittle.replace(dev_adress, '')
                 tittle = tittle.replace('/', ' ')
-                tittle = tittle.replace('.', ' ')
                 number_in_adress = [int(s)
                                     for s in tittle.split() if s.isdigit()]
                 number_in_adress = number_in_adress[0]
                 number_to_display = number_in_adress+1
-                tittle = tittle.replace(
-                    str(number_in_adress), str(number_to_display))
-                ax.set_title(tittle, fontsize=12, family="sans-serif",
-                             color='#f1f1f1', fontweight="bold")
+                tittle = tittle.replace(str(number_in_adress), str(number_to_display))
                 ax.tick_params(axis='x', colors='#f1f1f1')
                 ax.tick_params(axis='y', colors='#f1f1f1')
                 ax.spines['bottom'].set_color('#f1f1f1')
@@ -1019,8 +1004,21 @@ def check_fct():
                 ax.spines['left'].set_color('#f1f1f1')
                 im[i] = plt.imshow(blank_image, cmap=cmap, interpolation=None)
                 cb = plt.colorbar(format='%.2e')
-                cb.set_label('Range', color='#f1f1f1',
-                             fontsize=12, family="sans-serif")
+                if(".r" in tittle):
+                    cb.set_label('Volt RMS', color='#f1f1f1',fontsize=12, family="sans-serif", fontweight="bold")
+                elif(".theta" in tittle):
+                    cb.set_label('Radiant', color='#f1f1f1',fontsize=12, family="sans-serif", fontweight="bold")
+                elif(".frequency" in tittle):
+                    cb.set_label('Hz', color='#f1f1f1',fontsize=12, family="sans-serif", fontweight="bold")
+                elif(".x" in tittle):
+                    cb.set_label('Volt', color='#f1f1f1',fontsize=12, family="sans-serif", fontweight="bold")
+                elif(".y" in tittle):
+                    cb.set_label('Volt', color='#f1f1f1',fontsize=12, family="sans-serif", fontweight="bold")
+                else:
+                    cb.set_label('Range', color='#f1f1f1',fontsize=12, family="sans-serif", fontweight="bold")
+                tittle = tittle.replace('.', ' ')
+                ax.set_title(tittle, fontsize=12, family="sans-serif",
+                             color='#f1f1f1', fontweight="bold")
                 cb.ax.yaxis.set_tick_params(color='#f1f1f1')
                 cb.ax.xaxis.set_tick_params(color='#f1f1f1')
                 cb.outline.set_edgecolor('#f1f1f1')
@@ -1071,8 +1069,6 @@ pause_button = Button(controls_frame, width=8, text="Pause", padx=0, pady=0, fg=
 pause_button.grid(row=5, column=3, sticky=W+N+E)
 # endregion
 # region GUI stop
-
-
 def stop():
     global initialized, right_to_plot, signal_paths, data, daq_module, stoped, line_number, frame_vertical_trace, frames_drawn
     if stoped == 0:
@@ -1106,7 +1102,7 @@ def stop():
                             saved_signal_path = signal_path.replace('/', ' ')
                             saved_signal_path = saved_signal_path.replace(
                                 '.', ',')
-                            file_name = str('{} ; {} ; {} ; frame {} {}'.format(day_time_sample, sample_name_var.get(), saved_signal_path, (frames_drawn+1), trace_names[index]))
+                            file_name = str('{} ; {} ; {} ; frame {} {} (stopped)'.format(day_time_sample, sample_name_var.get(), saved_signal_path, (frames_drawn+1), trace_names[index]))
                             if save_to_gwy_checkbox_state.get():
                                 obj = GwyContainer()
                                 obj['/0/data/title'] = file_name
@@ -1159,6 +1155,8 @@ def stop():
                             logs_text.insert(
                                 'end', "- saved data at adress {} at {}\n".format(save_adress, current_time))
                 plt.clf()
+                delta_text=str("")
+                frequency_delta_text.configure(text=delta_text)
                 # empty the current adress list befor re launching
                 for signal_path in range(0, len(signal_paths)):
                     signal_paths.pop(0)
@@ -1305,8 +1303,11 @@ def check_save(*args):
             'Warning', 'if you uncheck both fields data will not be saved !', icon='warning')
     else:
         save_after_image_checkbox_state.set(1)
-    
-            
+def show_advanced(*args):
+    if advanced_checkbox_state.get():
+        connexion_frame.grid(row=3, column=0, columnspan=4, sticky=N+E+W)    
+    else:
+        connexion_frame.grid_remove()       
 connexion_fieldnames = ['connect_at_start', 'advanced', 'manual_freq','save_to_gwy','save_to_txt']
 connect_button = Button(configuration_frame, width=11, text="Connect", padx=3, pady=3, fg=dark_gray_color,
                         bg=connect_color, bd=1, highlightbackground=dark_gray_color, highlightcolor=selected_color, command=connect_me)
@@ -1348,8 +1349,7 @@ if(os.path.isfile(current_directory+'/configs/connexion.csv')):
             save_to_gwy_checkbox_state.set(int(line['save_to_gwy']))
             save_to_txt_checkbox_state.set(int(line['save_to_txt']))
             if(advanced_checkbox_state.get() != 0):
-                connexion_frame.grid(
-                    row=3, column=0, columnspan=4, sticky=N+E+W)
+                connexion_frame.grid(row=3, column=0, columnspan=4, sticky=N+E+W)
     logs_text.insert('end',"- found in configs/connexion\n   advanced = {}\n   connect at start = {}\n   manual sampling frequency = {}\n   save to gwyddion = {}\n   save to csv text = {}\n".format(advanced_checkbox_state.get(), autoconnect_checkbox_state.get(), manual_sample_freq_checkbox_state.get(), save_to_gwy_checkbox_state.get(), save_to_txt_checkbox_state.get()))
 hostname_text = Label(connexion_frame, text="hostname :", fg=white_color, bg=dark_gray_color,
                       bd=0, highlightbackground=dark_gray_color, highlightcolor=selected_color, justify='left')
@@ -1376,6 +1376,8 @@ save_to_txt_checkbox.grid(row=5, column=2)
 
 save_to_gwy_checkbox_state.trace('w', check_save)
 save_to_txt_checkbox_state.trace('w', check_save)
+advanced_checkbox_state.trace('w', show_advanced)
+
 save_after_image_checkbox_state.trace('w', check_save_default)
 advanced_checkbox.grid(row=9, column=3, sticky=W+N+E)
 advanced_text.grid(row=9, column=0, columnspan=3, sticky=W+N+E)

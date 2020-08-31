@@ -1,2 +1,2 @@
 draw,size,freq,trace_mode,color,save_after_image
-0,512,0.7,1,viridis,1
+0,256,0.7,1,inferno,0
