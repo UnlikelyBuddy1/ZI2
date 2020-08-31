@@ -144,7 +144,7 @@ now you will see the units of the data you are plotting
 ![units](https://user-images.githubusercontent.com/52712038/91717768-6f1ac780-eb92-11ea-8cb5-2efd6c9d71cd.png)
 
 
-## Images examples
+## Images
 ***Plotting some noise***
 ![image](https://user-images.githubusercontent.com/52712038/91551698-e8b07c80-e92a-11ea-9619-08ee8f9bcfd2.png)
 ![image](https://user-images.githubusercontent.com/52712038/91551716-eea65d80-e92a-11ea-90e3-16f5a9edf2ce.png)
