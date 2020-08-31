@@ -16,6 +16,7 @@
 - [Contact](#contact-not-for-bug-reports)
 - [Special thanks](#special-thanks)
 - [Help](#help)
+- [Updates](#updates)
 - [Images](#images)
 
 ## About the project
@@ -131,7 +132,19 @@ Please consider reading the manual to see common errors if something goes wrong,
 
 if you have the necessary knowledge i also encourage you to modify the source code so as to solve the problem and share your results with the community.
 
-## Images
+## Updates
+version 1.1 as launched with some minor tweaks to the GUI, and and the plotting of the data, see [release notes](https://github.com/UnlikelyBuddy1/ZI2/releases/tag/1.1) for more information.
+
+This is what the new interface looks like :
+
+![image](https://user-images.githubusercontent.com/52712038/91717333-99b85080-eb91-11ea-989c-15072ad956c5.png)
+
+now you will see the units of the data you are plotting
+
+![units](https://user-images.githubusercontent.com/52712038/91717768-6f1ac780-eb92-11ea-8cb5-2efd6c9d71cd.png)
+
+
+## Images examples
 ***Plotting some noise***
 ![image](https://user-images.githubusercontent.com/52712038/91551698-e8b07c80-e92a-11ea-9619-08ee8f9bcfd2.png)
 ![image](https://user-images.githubusercontent.com/52712038/91551716-eea65d80-e92a-11ea-90e3-16f5a9edf2ce.png)
