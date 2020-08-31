@@ -110,6 +110,7 @@ we also define the background color and the icon image,
 if you delete the image the program will still launch without problem 
 but i would not recommend it
 """
+
 def shut_down():
     try:
         daq_module.finish()
@@ -135,11 +136,19 @@ def shut_down():
                     connexion_fieldnames[4]:'{}'.format(save_to_txt_checkbox_state.get())}
             csv_writer.writerow(line)
     sys.exit()
-
+    
+window_state=False
+def toggleFullScreen(*args):
+    global window_state
+    window_state=not(window_state)
+    root.attributes('-fullscreen', window_state)
+    
+def quitFullScreen(*args):
+    root.attributes('-fullscreen', False)
 
 root = Tk()
 root.title("Zi²")  # assign a title to the window
-root.configure(background="#222222")
+root.configure(background=dark_gray_color)
 try:
     root.iconphoto(False, tk.PhotoImage(
         file=current_directory+'/imgs/logo.png'))
@@ -153,6 +162,9 @@ if("win" in sys.platform):
     root.state('zoomed')
 else:
     root.attributes('-zoomed', True)
+
+root.bind("<F11>", toggleFullScreen)
+root.bind("<Escape>", quitFullScreen)
 
 # endregion
 # region GUI FRAMES
@@ -720,6 +732,7 @@ def animate(i):
                                 if graph_to_update_number-1 == index:
                                     delta = max-min
                                     delta_text=str(delta_text+("   delta freq graph n°{} = {:.2f}hz   ".format((index+1), delta)))
+                            frequency_delta_text.configure(text="")
                             frequency_delta_text.configure(text=delta_text)
                         # update plot with trace or retrace
                         im[graph_to_update_number].set_data(data_trace)
@@ -844,6 +857,7 @@ def check_fct():
         logs_text.insert(
             'end', "- the sampling process is being initialized ... at {}\n".format(current_time))
         size = int(size_entry.get())
+        frequency = float(frequency_entry.get())
         if (size <= size_min_limit):
             logs_text.insert(
                 'end', "- the image size is too low. The application does not support it, however you can manually change the bottom limit in the program script \n")
@@ -860,7 +874,6 @@ def check_fct():
             launch = 1
             size_entry.configure(highlightbackground="#2d2d30",
                                  highlightcolor=selected_color)
-        frequency = float(frequency_entry.get())
         if (frequency < frequency_min_limit):
             logs_text.insert(
                 'end', "- the line sacnning frequency is too low. The application does not support it, however you an manually change the upper limit in the program script \n")
@@ -1039,9 +1052,9 @@ def check_fct():
                 daq_module.execute()
                 now = datetime.now()
                 current_time = now.strftime("%Hh-%Mm-%Ss")
-                logs_text.insert(
+            logs_text.insert(
                     'end', "- sampling module has been started at {} triggering on EOF\n".format(current_time))
-                logs_text.insert('end', "- all the plots have initialized \n")
+            logs_text.insert('end', "- all the plots have initialized \n")
         else:
             pass
     else:
