@@ -26,8 +26,8 @@ The goal of this application is to be able to bypass the limitation of using the
 
 ## Getting started
 ### Prerequisites
-There are two ways of running this application, either using an simple [***EXE***](https://github.com/UnlikelyBuddy1/ZI2/releases/download/1.0/Zi.rar) for **Windows** that has to be launched within its folder (because they contain all the python modules, application data etc...) and that requires no installer. 
-**Or** by **running the [Source code](https://github.com/UnlikelyBuddy1/ZI2/archive/1.0.zip)** of the application with Python and all the modules. In which case you'll need :
+There are two ways of running this application, either using an simple [***EXE***](https://github.com/UnlikelyBuddy1/ZI2/releases/download/1.1/Zi.rar) for **Windows** that has to be launched within its folder (because they contain all the python modules, application data etc...) and that requires no installer. 
+**Or** by **running the [Source code](https://github.com/UnlikelyBuddy1/ZI2/archive/1.1.zip)** of the application with Python and all the modules. In which case you'll need :
 - [**Python version 3.7.7 (or upper)**](https://www.python.org/downloads/)
 
 - **Numpy** module version ***1.19.0***, to deal with matrixes and data
@@ -59,11 +59,10 @@ The versions of the modules shouldn't cause any problems except for matplolib wh
 ### Installation
 Like i said there no installer, just a folder wich contains all the necessary files.
 If you want the Windows EXE version than :
-- **download** the Github repository as a ZIP
+- **download** the Github binaries in the latest release as a ZIP
 - **UnZIP** it and open it
-- **UnZIP** the *"Zi².rar"*
-- **Open** the folder *"Zi²"* and find the executable named *"Zi².exe"*
-- **Run it**, **INSIDE !** the Zi² folder or just make a shortcut to run it from anywhere
+- **Find** the executable named *"Zi².exe"*
+- **Run it**, **INSIDE !** the Zi folder or just make a shortcut to run it from anywhere
 
 If you want to run the source code than :
 - **download** the Github repository as a ZIP
@@ -122,13 +121,13 @@ You can also read the full [*LICENSE*](https://cecill.info/licences/Licence_CeCI
 ## Contact, *Not for bug reports*
 You can contact me at adrianos.sidiras@gmail.com, however I no longer work on this project since it was for a 2 months internship
 ## Special thanks
-I'd like to thank the [*INL*](https://inl.cnrs.fr/) and both of my internship tutors, Nicolas BABOUX and David ALBERTINI david.albertini@insa-lyon.fr for the guidance they provided in this project, as well as Mehdi ALEM from the Zurich instruments support team which did an amazing job of explaining how to get advantage of the HF2LI programming features.
+I'd like to thank the [*INL*](https://inl.cnrs.fr/) and both of my internship tutors, David ALBERTINI david.albertini@insa-lyon.fr and Nicolas BABOUX and  for the guidance they provided in this project, as well as Mehdi ALEM from the Zurich instruments support team which did an amazing job of explaining how to properly use of the HF2LI programming features.
 
 ## Help 
 Please consider reading the manual to see common errors if something goes wrong, and if the problem can't be solved i re-command you read Zurich instrument's manual 
 - [**HF2LI Manual**](https://www.zhinst.com/sites/default/files/documents/2020-03/ziHF2_UserManual_LabOne_20.01.0.pdf)
 - [**LabOne Programming Manual**](https://www.zhinst.com/sites/default/files/documents/2020-03/LabOneProgrammingManual_20.01.0.pdf)
-- [**Zi² Manual**](https://github.com/UnlikelyBuddy1/ZI2/releases/download/1.0/Zi.User.Manual.pdf)
+- [**Zi² Manual**](https://github.com/UnlikelyBuddy1/ZI2/releases/download/1.1/Zi.User.Manual.pdf)
 
 if you have the necessary knowledge i also encourage you to modify the source code so as to solve the problem and share your results with the community.
 
